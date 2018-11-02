@@ -1,0 +1,111 @@
+★ HTML
+
+w3schools.com의 Bootst   레퍼런스 페이지
+layoutit.com  레이아웃
+구글에서 bootstrap theme free (기본적인 틀)
+
+
+
+
+
+tool(문서편집기)
+atom.io 다운로드
+플러그인 설치
+atom에서 file - setting - install -> 'live-server' 검색 설치  
+
+
+
+<a href : 누르면 이동하는 속성
+
+
+
+
+기본 구조 
+<!DOCTYPE html>
+<htmal>
+
+<head>
+눈에 보여지지 않는 여러가지 설정들(인코딩 등)
+</head>
+
+<body>
+실질적인 컨텐츠들
+</body>
+
+★★아무것도 작성안하고 하면 body로 인식됨.
+
+
+</html>
+
+
+
+a 태그
+ul li
+
+table  ★★★★★★★★★★
+
+image adieo
+
+전체 :  *
+태그 : 태그명
+class : class='xxx' <= .xxx
+id : id = 'ooo' <= #ooo
+속성 input type = 'text'  <= [type=text]
+자식 <div> <P> </P> </div> <= div > p
+후손 <div> <P>  <h1> </h1> </P> </div> <= div h1
+형제(인접)  <p> </p> <p> </p>    <= p+p
+형제   <p> </p> <p> </p> <p> </p>    <= p~p
+
+
+
+
+
+
+
+table
+
+tr 행
+td 열
+
+
+공간 분할태그
+div는 블록형식으로 분할
+span은 인라인형식으로 분할
+form 태그(전송을 하기 위한 태그)는 submit 속성이 있음.
+                                             action : 어디서버에 전송해줄건지, method (get(주소창에 보임) / post(안보임))
+                                                                                               ajax에서는 네개(+put, delet)
+선택자 ( 전체 * 태그 '' 아이디 '#' 클래스 ) jquery 1장
+
+for (var i = 0;  i < 5; i++) {                         }
+                     가변인자   arguments???
+
+
+
+
+
+자바스크립트 리스트
+
+list = [1, 2, 3, 4, 5, 'a', 'b', true]
+
+len = list . length
+
+alert(len)
+
+alert(list.join('@'))
+
+
+
+jquery 이렇게 시작합니다
+jQuery(document). ready(function() {     }  인터프리터 언어라서 앞에 나오면 실행이 안되는 경우가 있는데 그것을 
+                                                    해결해줌
+
+
+
+
+
+
+
+
+
+
+

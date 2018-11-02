@@ -1,0 +1,36 @@
+www.w3schools.com (HTML 라이브러리)
+구글에서 bootstrap theme free : 각종 웹 폼
+파비콘 
+구글 웹 폰트 : 폰트 가져오는 서버
+https://www.dothome.co.kr/index.php
+ :무료 호스팅
+   -> 파일질라 :  클라이언트 설치
+아톰 HTML 자동완성 : beautify 
+jqueryui : 자바스크립트 라이브러리
+iconarchive : 무료로 제공이 되는 아이콘들
+CVS, SVN, GIT, Mecurial
+소스코드 공유(관리)
+/ 형상관리
+/ VCS(Version Control System
+
+누가 삽질했는지 추적 가능, 덮어쓰기 가능 등등
+
+                                          git 프로그램
+ git  동작 프로그램(툴) - Pycham, Source Tree
+             commit                     push
+workspace -> localRepository -> remoteRepository
+                 pull                        fetch
+workspace <- localRepository <- remoteRepository
+
+두번째까지는 내 컴퓨터/로컬, 
+마지막은 github or bitbucket
+
+
+
+client
+
+
+form
+css선택자
+자바스크립트 함수
+ajax crud

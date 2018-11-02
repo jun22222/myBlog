@@ -1,0 +1,46 @@
+{% extends 'postboard/index.html' %}
+{% block content %}
+
+{{ board.memo }}
+<br>
+첨부파일 : {{ board.file }}
+
+
+<br>
+<div>
+    <input type = button value="수정" OnClick="reWrite()">
+    <input type = button value="삭제" OnClick="delWrite()">
+    <input type = button value="목록" OnClick="goBack()">
+
+    {% csrf_token %}
+</div>
+{% load static %}
+ <script src = "{% static 'js/jquery.min.js' %}"></script>
+ <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+ <script language="javascript">
+
+      function goBack() {
+         location="{% url 'daily' %}";
+       }
+      function reWrite() {
+         location.href='/postboard/updateBoard/{{board.id}}';
+      }
+
+      function delWrite() {
+        $.ajax({
+            url: "{% url 'delBoard' %}",
+            type: 'post',
+            data: {
+                'id':'{{ board.id }}',
+                'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
+            },
+            success: function(res) {
+                alert(res.Ans)
+                location="{% url 'daily'%}"
+            }
+         })
+
+      }
+  </script>
+{% endblock %}

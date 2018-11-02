@@ -1,0 +1,66 @@
+
+
+
+{% extends 'postboard/index.html' %}
+{% block content %}
+  <html>
+  <!--<head>-->
+  <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8">-->
+  <!--<title>게시판 글쓰기</title>-->
+  <!--</head>-->
+  <h2>게시판 글쓰기</h2>
+  <table width=700 border=1 cellspacing=0 cellpadding=5>
+  <form name=writeform method = 'post' enctype="multipart/form-data">
+      {% csrf_token %}
+  <!--<form name=writeform method='post'>-->
+      <tr><td><b>이름</b></td><td><input type=text name=name size=50  maxlength=50></td></tr>
+      <tr><td><b>이메일</b></td><td><input type=text name=email size=50  maxlength=50></td></tr>
+      <tr><td><b>제목</b></td><td><input type=text name=subject size=50  maxlength=50></td></tr>
+      <tr><td><b>내용</b></td><td><textarea name=memo cols=50 rows=10></textarea></td></tr>
+      <tr>
+        <td>
+              <input type="file" name='my_file' multiple>
+        </td>
+      </tr>
+
+      <!--<form action="" method="post" enctype="multipart/form-data">-->
+        <!--{{ form.as_p }}-->
+        <!--<input type="submit" value="완료" onclick="upLoad()">-->
+        <!--{% csrf_token %}-->
+      <!--</form>-->
+      <tr><td><button type="submit" onclick="return writeCheck()">등록</button></td></tr>
+
+
+
+  </form>
+{% endblock %}
+  </table>
+       {% load static %}
+       <script src = "{% static 'js/jquery.min.js' %}"></script>
+       <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+       <script language="javascript">
+
+      function writeCheck() {
+          var form = document.writeform;
+
+          if (!form.name.value)
+          {
+              alert("이름을 적어주세요");
+              form.name.focus();
+              return false;
+          }
+          if (!form.subject.value) {
+              alert("제목을 적어주세요");
+              form.subject.focus();
+              return false;
+          }
+          if (!form.memo.value) {
+              alert("내용을 적어주세요");
+              form.memo.focus();
+              return false;
+          }
+          alert('입력완료되었습니다')
+          form.submit();
+      }
+  </script>
